@@ -1,10 +1,8 @@
-Plankton
-========
+# Plankton
 
 This is a PHP pico framework
 
-Features
---------
+## Features
 
 It features:
 
@@ -16,37 +14,30 @@ It features:
 
 All that with bleeding edge performances
 
-Documentation
--------------
+## Documentation
 
 * RTFC = Read The Fucking Code
 
-Controllers
-~~~~~~~~~~~
+### Controllers
 
 RTFC
 
-Configuration
-~~~~~~~~~~~~~
+### Configuration
 
 RTFC
 
-Database
-~~~~~~~~
+### Database
 
 RTFC
 
-Templating
-~~~~~~~~~~
+### Templating
 
 RTFC
 
-Router
-~~~~~~
+### Router
 
 RTFC
 
-LICENCE
--------
+## LICENCE
 
 This repository is under Beer-Ware licence
