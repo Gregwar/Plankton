@@ -29,4 +29,7 @@ foreach ($config['controllers'] as $controller) {
 
 $action = isset($actions[$page]) ? $actions[$page] 
     : $actions['/404'];
-$action();
+$response = $action();
+if ($response) {
+    render($response[0], isset($response[1]) ? $response[1] : array());
+}
