@@ -10,7 +10,10 @@ if ($app['pdo_enable']) {
 function path($url, $asset = false) {
     $directory = $_SERVER['SCRIPT_NAME'];
     if ($asset) {
-        $directory = substr(dirname($directory), 0, -1);
+        $directory = dirname($directory);
+        if ($directory[strlen($directory)-1] == '/') {
+            $directory = substr($directory, 0, -1);
+        }
     } else {
         $directory .= '/';
     }
