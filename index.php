@@ -29,8 +29,11 @@ foreach ($app['controllers'] as $controller) {
 
 $action = isset($actions[$page]) ? $actions[$page] 
     : $actions['/404'];
-$response = $action();
-if ($response) {
-    render($response[0], isset($response[1]) ? $response[1] 
-        : array());
+if ($response = $action()) {
+    if (is_array($response)) {
+        render($response[0], isset($response[1]) ? $response[1] 
+            : array());
+    } else {
+        echo $response;
+    }
 }
