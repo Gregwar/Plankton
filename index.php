@@ -1,5 +1,4 @@
 <?php
-
 $app = include(__DIR__.'/app.php');
 
 if ($app['pdo_enable']) {
@@ -8,8 +7,14 @@ if ($app['pdo_enable']) {
     $pdo->exec('SET CHARSET UTF8');
 }
 
-function path($url) {
-    return $_SERVER['SCRIPT_NAME'].'/'.$url;
+function path($url, $asset = false) {
+    $directory = $_SERVER['SCRIPT_NAME'];
+    if ($asset) {
+        $directory = substr(dirname($directory), 0, -1);
+    } else {
+        $directory .= '/';
+    }
+    return $directory.$url;
 }
 
 function render($page, array $variables = array()) {
@@ -18,7 +23,7 @@ function render($page, array $variables = array()) {
     include(__DIR__.'/views/layout.php');
 }
 
-$page = isset($_SERVER['PATH_INFO']) ?
+$page = isset($_SERVER['PATH_INFO']) ? 
     $_SERVER['PATH_INFO'] : '/';
 
 $actions = array();
