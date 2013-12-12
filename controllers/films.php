@@ -1,8 +1,6 @@
 <?php return array(
-    '/films' => function() {
-        global $pdo;
-
+    '/films' => function($app) {
         return array('films', array('films' => 
-            $pdo->query('SELECT * FROM films')));
+            $app['pdo']->query('SELECT * FROM films')));
     }
 );
