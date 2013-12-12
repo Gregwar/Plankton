@@ -14,6 +14,9 @@ It features:
 
 All that with bleeding edge performances
 
+It also comes with some examples page, an index, a 404, a
+a page greeting you and a page listing films from database
+
 ## Documentation
 
 * RTFC = Read The Fucking Code
