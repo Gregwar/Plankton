@@ -1,10 +1,10 @@
 <?php
 
-$config = include(__DIR__.'/config.php');
+$app = include(__DIR__.'/app.php');
 
-if ($config['enable_pdo']) {
-    $pdo = new \PDO($config['dsn'], $config['user'], 
-        $config['password']);
+if ($app['pdo_enable']) {
+    $pdo = new \PDO($app['pdo_dsn'], $app['pdo_user'], 
+        $app['pdo_password']);
     $pdo->exec('SET CHARSET UTF8');
 }
 
@@ -13,7 +13,7 @@ function path($url) {
 }
 
 function render($page, array $variables = array()) {
-    global $config;
+    global $app;
     extract($variables);
     include(__DIR__.'/views/layout.php');
 }
@@ -22,7 +22,7 @@ $page = isset($_SERVER['PATH_INFO']) ?
     $_SERVER['PATH_INFO'] : '/';
 
 $actions = array();
-foreach ($config['controllers'] as $controller) {
+foreach ($app['controllers'] as $controller) {
     $actions = array_merge($actions, 
         include(__DIR__.'/controllers/'.$controller.'.php'));
 }
