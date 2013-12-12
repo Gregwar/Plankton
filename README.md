@@ -1,6 +1,6 @@
 # Plankton
 
-This is a PHP pico framework
+This is a PHP pico framework (less than 100 lines)
 
 ## Features
 
