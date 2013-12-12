@@ -17,6 +17,10 @@ All that with bleeding edge performances
 It also comes with some examples page, an index, a 404, a
 a page greeting you and a page listing films from database
 
+It doesn't uses any third-party library, everything is 
+in this repository, you can quickly read all its source
+code.
+
 ## Documentation
 
 * RTFC = Read The Fucking Code
