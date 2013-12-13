@@ -1,4 +1,5 @@
 <?php
+
 $app = include(__DIR__.'/app.php');
 
 function asset($path) {
