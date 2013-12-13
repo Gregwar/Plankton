@@ -1,17 +1,16 @@
 <?php
 $app = include(__DIR__.'/app.php');
 
-function path($url, $asset = false) {
-    $directory = $_SERVER['SCRIPT_NAME'];
-    if ($asset) {
-        $directory = dirname($directory);
-        if ($directory[strlen($directory)-1] == '/') {
-            $directory = substr($directory, 0, -1);
-        }
-    } else {
-        $directory .= '/';
+function asset($path) {
+    $directory = dirname($_SERVER['SCRIPT_NAME']);
+    if ($directory[strlen($directory)-1] == '/') {
+        $directory = substr($directory, 0, -1);
     }
-    return $directory.$url;
+    return $directory.$path;
+}
+
+function path($url) {
+    return $_SERVER['SCRIPT_NAME'].'/'.$url;
 }
 
 function render($page, array $variables = array()) {

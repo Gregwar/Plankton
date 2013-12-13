@@ -2,7 +2,7 @@
 <html>
     <html>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="<?php echo path('/css/style.css', true); ?>" />
+        <link rel="stylesheet" href="<?php echo asset('/css/style.css'); ?>" />
         <title>Plankton</title>
     </html>
     <body>

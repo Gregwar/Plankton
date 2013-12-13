@@ -6,7 +6,7 @@ This is a PHP (pedagogical) pico framework (less than 100 lines)
 
 It features:
 
-* An amazing route generator, with the `path()` function
+* An amazing route generator, with the `path()` and `asset()` functions
 * A tremendous templating system with the `render()` function
 * Splendid architecture of controllers
 * External powerful configuration
