@@ -4,14 +4,16 @@ $app = include(__DIR__.'/app.php');
 
 function asset($path) {
     $directory = dirname($_SERVER['SCRIPT_NAME']);
+
     if ($directory[strlen($directory)-1] == '/') {
         $directory = substr($directory, 0, -1);
     }
-    return $directory.$path;
+
+    return $directory . $path;
 }
 
 function path($url) {
-    return $_SERVER['SCRIPT_NAME'].'/'.$url;
+    return $_SERVER['SCRIPT_NAME'] . '/'.$url;
 }
 
 function render($page, array $variables = array()) {
