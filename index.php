@@ -20,22 +20,20 @@ function render($page, array $variables = array()) {
     include(__DIR__.'/views/layout.php');
 }
 
-$page = isset($_SERVER['PATH_INFO']) ? 
-    $_SERVER['PATH_INFO'] : '/';
+$page = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
 
 $actions = array();
 foreach ($app['controllers'] as $controller) {
-    $actions = array_merge($actions, 
-        include(__DIR__.'/controllers/'.$controller.'.php'));
+    $file = __DIR__.'/controllers/'.$controller.'.php';
+    $actions = array_merge($actions, include($file));
 }
 
-$action = isset($actions[$page]) ? $actions[$page] 
-    : $actions['/404'];
+$action = isset($actions[$page]) ? $actions[$page] : $actions['/404'];
 
 if ($response = $action($app)) {
     if (is_array($response)) {
-        render($response[0], isset($response[1]) ? $response[1] 
-            : array());
+        $variables = isset($response[1]) ? $response[1] : array();
+        render($response[0], $variables);
     } else {
         echo $response;
     }
