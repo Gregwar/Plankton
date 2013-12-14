@@ -13,7 +13,7 @@ function asset($path) {
 }
 
 function path($url) {
-    return $_SERVER['SCRIPT_NAME'] . '/'.$url;
+    return $url;
 }
 
 function render($page, array $variables = array()) {
@@ -22,7 +22,7 @@ function render($page, array $variables = array()) {
     include(__DIR__.'/views/layout.php');
 }
 
-$page = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
+$page = isset($_GET['plankton']) ? $_GET['plankton'] : '/';
 
 $actions = array();
 foreach ($app['controllers'] as $controller) {

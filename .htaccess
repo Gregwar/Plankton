@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+   Options +FollowSymLinks -MultiViews
+   # Turn mod_rewrite on
+   RewriteEngine On
+
+   RewriteCond %{REQUEST_FILENAME} !-f
+   RewriteCond %{REQUEST_FILENAME} !-d
+   RewriteRule ^(.*)$ index.php?plankton=/$1 [L,QSA]
+</IfModule>
