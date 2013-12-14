@@ -1,6 +1,7 @@
 # Plankton
 
-This is a PHP (pedagogical) pico framework (less than 100 lines)
+This is a PHP (pedagogical) pico framework (42 lines for the core,
+100 including examples)
 
 ## Features
 
@@ -20,6 +21,8 @@ a page greeting you and a page listing films from database
 It doesn't uses any third-party library, everything is 
 in this repository, you can quickly read all its source
 code.
+
+For more information, have a look at [the blog post about Plankton](http://gregwar.com/posts/plankton-a-php-pedagocical-42-lines-framework)
 
 ## Documentation
 
