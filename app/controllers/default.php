@@ -2,9 +2,10 @@
     '/' => function() {
         return array('home');
     },
-    '/hello' => function() {
+    '/hello' => function($app) {
+        $request = $app['request'];
         return array('hello', array(
-            'name' => isset($_GET['name']) ? $_GET['name'] : '?'
+            'name' => isset($request['name']) ? $request['name'] : '?'
         ));
     },
     '/404' => function() {

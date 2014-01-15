@@ -3,10 +3,10 @@
     <html>
         <meta charset="utf-8" />
         <link rel="stylesheet" href="<?php echo asset('/css/style.css'); ?>" />
-        <title>Plankton</title>
+        <title>Plankton example</title>
     </html>
     <body>
-        <h1>Plankton</h1>
+        <h1>Plankton example</h1>
         <?php include(__DIR__.'/'.$page.'.php'); ?>
     </body>
 </html>
