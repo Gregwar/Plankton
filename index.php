@@ -1,6 +1,6 @@
-<?php
+<?php // Plankton
 
-$app = include(__DIR__.'/app.php');
+$app = include(__DIR__.'/app/app.php');
 
 function asset($path) {
     $directory = dirname($_SERVER['SCRIPT_NAME']);
