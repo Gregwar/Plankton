@@ -6,6 +6,10 @@
     "license": "MIT",
     "authors": [
         {
+            "name": "Quentin Rouxel",
+            "email": "qrouxel@labri.fr"
+        },
+        {
             "name": "Grégoire Passault",
             "email": "g.passault@gmail.com",
             "homepage": "http://www.gregwar.com/"
