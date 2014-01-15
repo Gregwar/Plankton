@@ -12,6 +12,7 @@ It features:
 * Splendid architecture of controllers
 * External powerful configuration
 * An awesome database layer
+* It example suggests a swaggy way to handle your database
 
 All that with bleeding edge performances
 
@@ -21,6 +22,9 @@ a page greeting you and a page listing films from database
 It doesn't uses any third-party library, everything is 
 in this repository, you can quickly read all its source
 code.
+
+It also features a generic autoloader, so you can write your
+own classes and easily access it.
 
 For more information, have a look at [the blog post about Plankton](http://gregwar.com/posts/plankton-a-php-pedagocical-42-lines-framework)
 
