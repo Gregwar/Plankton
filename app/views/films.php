@@ -1,6 +1,7 @@
-Films:
-<ul>
+<h2 class="text-muted">Films</h2>
+
+<ul class="list-group">
     <?php foreach ($films as $film) { ?>
-        <li><?php echo $film['name']; ?></li>
+        <li class="list-group-item"><?php echo $film['name']; ?></li>
     <?php } ?>
 </ul>

@@ -3,9 +3,9 @@
         return array('home');
     },
     '/hello' => function($app) {
-        $request = $app['request'];
+        $parameters = $app['request']['parameters'];
         return array('hello', array(
-            'name' => isset($request['name']) ? $request['name'] : '?'
+            'name' => isset($parameters['name']) ? $parameters['name'] : 'you'
         ));
     },
     '/404' => function() {

@@ -1,7 +1,5 @@
+<h2 class="text-muted">Welcome</h2>
+
 <p>
-    Welcome!
-</p>
-<p>
-    <a href="<?php echo path('hello'); ?>?name=Greg">Hello Greg &raquo;</a><br />
-    <a href="<?php echo path('films'); ?>">Films &raquo;</a>
+    Welcome to Plankton!
 </p>
