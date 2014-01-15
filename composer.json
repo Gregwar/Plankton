@@ -18,10 +18,5 @@
     "require": {
         "php": ">=5.3.0"
     },
-    "target-dir": "Gregwar/Plankton",
-    "autoload": {
-        "psr-0": {
-            "Gregwar\\Plankton": ""
-        }
-    }
+    "target-dir": "plankton"
 }
