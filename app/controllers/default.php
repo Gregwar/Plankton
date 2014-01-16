@@ -8,7 +8,8 @@
             'name' => isset($parameters['name']) ? $parameters['name'] : 'you'
         ));
     },
-    '/404' => function() {
-        return array('404');
+    '/error' => function() {
+        http_response_code(404);    
+        return array('error');
     }
 );

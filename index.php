@@ -30,7 +30,7 @@ foreach ($app['controllers'] as $controller) {
     $actions = array_merge($actions, include($file));
 }
 
-$action = isset($actions[$page]) ? $actions[$page] : $actions['/404'];
+$action = isset($actions[$page]) ? $actions[$page] : $actions['/error'];
 
 if ($response = $action($app)) {
     if (is_array($response)) {
