@@ -11,8 +11,8 @@ It features:
 * A tremendous templating system with the `render()` function
 * Splendid architecture of controllers
 * External powerful configuration
-* An awesome database layer
 * It example suggests a swaggy way to handle your database
+* Packaged with bootstrap
 
 All that with bleeding edge performances
 
