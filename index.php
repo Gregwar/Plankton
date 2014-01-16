@@ -9,7 +9,7 @@ function asset($path) {
         $directory = substr($directory, 0, -1);
     }
 
-    return $directory . $path;
+    return $directory.$path;
 }
 
 function path($url = '') {
