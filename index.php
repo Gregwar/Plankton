@@ -13,7 +13,7 @@ function asset($path) {
 }
 
 function path($url = '') {
-    return $_SERVER['SCRIPT_NAME'] . '/'.$url;
+    return $_SERVER['SCRIPT_NAME'].'/'.$url;
 }
 
 function render($page, array $variables = array()) {
