@@ -16,10 +16,10 @@ function path($url = '') {
     return $_SERVER['SCRIPT_NAME'].'/'.$url;
 }
 
-function render($page, array $variables = array()) {
+function render($page, array $variables = array(), $layout = 'layout') {
     global $app, $root;
     extract($variables);
-    include($root.'/views/layout.php');
+    include($root.'/views/'.($layout ? $layout : $page).'.php');
 }
 
 $page = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
