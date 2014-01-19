@@ -7,7 +7,7 @@
         <title>Plankton example</title>
     </head>
     <body>
-        <?php render('menu', array(), false); ?>
+        <?php render('header', array(), false); ?>
 
         <?php include(__DIR__.'/'.$page.'.php'); ?>
 
