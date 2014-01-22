@@ -1,6 +1,6 @@
 # Plankton
 
-This is a PHP (pedagogical) pico framework (42 lines for the core,
+This is a PHP pico framework (42 lines for the core,
 100 including examples)
 
 ## Features
