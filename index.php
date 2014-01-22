@@ -9,17 +9,17 @@ function asset($path) {
         $directory = substr($directory, 0, -1);
     }
 
-    return $directory . $path;
+    return $directory.$path;
 }
 
 function path($url = '') {
-    return $_SERVER['SCRIPT_NAME'] . '/'.$url;
+    return $_SERVER['SCRIPT_NAME'].'/'.$url;
 }
 
-function render($page, array $variables = array()) {
+function render($page, array $variables = array(), $layout = 'layout') {
     global $app, $root;
     extract($variables);
-    include($root.'/views/layout.php');
+    include($root.'/views/'.($layout ? $layout : $page).'.php');
 }
 
 $page = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
@@ -30,8 +30,8 @@ foreach ($app['controllers'] as $controller) {
     $actions = array_merge($actions, include($file));
 }
 
-$action = isset($actions[$page]) ? $actions[$page] : $actions['/404'];
-
+$app['action'] = isset($actions[$page]) ? $page : '/error';
+$action = $actions[$app['action']];
 if ($response = $action($app)) {
     if (is_array($response)) {
         $variables = isset($response[1]) ? $response[1] : array();

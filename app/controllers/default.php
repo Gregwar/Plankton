@@ -8,7 +8,9 @@
             'name' => isset($parameters['name']) ? $parameters['name'] : 'you'
         ));
     },
-    '/404' => function() {
-        return array('404');
+    '/error' => function() {
+        header("HTTP/1.0 404 Not Found");
+        header("Status: 404 Not Found");
+        return array('error');
     }
 );
