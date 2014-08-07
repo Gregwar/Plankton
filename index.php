@@ -22,7 +22,7 @@ function render($page, array $variables = array(), $layout = 'layout') {
     include($root.'/views/'.($layout ? $layout : $page).'.php');
 }
 
-$page = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
+$page = empty($_SERVER['PATH_INFO']) ? '/' : $_SERVER['PATH_INFO'];
 
 $actions = array();
 foreach ($app['controllers'] as $controller) {
