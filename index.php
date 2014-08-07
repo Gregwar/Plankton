@@ -32,10 +32,10 @@ foreach ($app['controllers'] as $controller) {
 
 $app['action'] = isset($actions[$page]) ? $page : '/error';
 $action = $actions[$app['action']];
+
 if ($response = $action($app)) {
     if (is_array($response)) {
-        $variables = isset($response[1]) ? $response[1] : array();
-        render($response[0], $variables);
+        render($response[0], $response);
     } else {
         echo $response;
     }
