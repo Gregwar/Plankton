@@ -18,7 +18,7 @@ function path($url = '') {
 
 function render($page, array $variables = array(), $layout = 'layout') {
     global $app, $root;
-    extract($variables);
+    extract($variables, EXTR_SKIP);
     include($root.'/views/'.($layout ? $layout : $page).'.php');
 }
 
