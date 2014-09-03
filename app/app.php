@@ -7,7 +7,7 @@ return array(
     'model' => new \Model('cinema', 'root', 'root'),
 
     'request' => array(
-        'parameters' => array_merge($_GET, $_POST),
+        'parameters' => $_REQUEST,
         'method' => $_SERVER['REQUEST_METHOD'],
     )
 );
