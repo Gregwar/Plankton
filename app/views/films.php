@@ -2,6 +2,6 @@
 
 <ul class="list-group">
     <?php foreach ($films as $film) { ?>
-        <li class="list-group-item"><?php echo $film['name']; ?></li>
+        <li class="list-group-item"><?php echo htmlspecialchars($film['name']); ?></li>
     <?php } ?>
 </ul>
