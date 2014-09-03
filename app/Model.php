@@ -8,6 +8,7 @@ class Model
     {
         try {
             $this->pdo = new \PDO('mysql:dbname='.$database.';host='.$host, $user, $password);
+            $this->pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
             $this->pdo->exec('SET CHARSET UTF8');
         } catch (\PDOException $e) {
             $this->pdo = null;
